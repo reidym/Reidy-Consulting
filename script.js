@@ -15,3 +15,30 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
   });
 });
+
+// Use the real profile images uploaded to the repository.
+const heroPortrait = document.querySelector(".portrait-placeholder");
+if (heroPortrait) {
+  heroPortrait.style.backgroundImage = 'url("Martin-Reidy_headshot%20jpg.jpg")';
+  heroPortrait.style.backgroundSize = "cover";
+  heroPortrait.style.backgroundPosition = "center 20%";
+  heroPortrait.style.backgroundRepeat = "no-repeat";
+  heroPortrait.setAttribute("role", "img");
+  heroPortrait.setAttribute("aria-label", "Portrait of Martin Reidy");
+  heroPortrait.querySelectorAll("span, strong, small").forEach((el) => {
+    el.style.display = "none";
+  });
+}
+
+const aboutPortrait = document.querySelector(".about-monogram");
+if (aboutPortrait) {
+  aboutPortrait.style.backgroundImage = 'url("PXL_20260604_084142141.jpg")';
+  aboutPortrait.style.backgroundSize = "cover";
+  aboutPortrait.style.backgroundPosition = "center 24%";
+  aboutPortrait.style.backgroundRepeat = "no-repeat";
+  aboutPortrait.setAttribute("role", "img");
+  aboutPortrait.setAttribute("aria-label", "Martin Reidy at the MFAA Excellence Awards");
+  aboutPortrait.querySelectorAll("span, small").forEach((el) => {
+    el.style.display = "none";
+  });
+}
